@@ -1,0 +1,7 @@
+<div class="container" *ngIf="!gameOver">
+  <app-question [question]="currentQuestion" (answered)="handleAnswer($event)"></app-question>
+</div>
+<div class="container" *ngIf="gameOver">
+  <p>Juego terminado! Puntuación: {{ score }}</p>
+  <button class="btn btn-success" (click)="restartGame()">Reiniciar juego</button>
+</div>

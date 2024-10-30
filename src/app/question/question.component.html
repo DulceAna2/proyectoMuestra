@@ -1,0 +1,8 @@
+<div class="container">
+  <p>{{ question.text }}</p>
+  <img [src]="question.imagen" alt="">
+  <div *ngFor="let option of question.options">
+    <button class="btn btn-info btn-block mb-4" (click)="selectOption(option)">{{ option }}</button>
+  </div>
+</div>
+

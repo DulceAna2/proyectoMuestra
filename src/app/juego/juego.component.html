@@ -1,0 +1,24 @@
+<div *ngFor="let preguntas of preguntas">
+    <div class="card">
+        <p class="card-text">{{preguntas.categoria}}</p>
+        <img [src]="preguntas.imagen" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-text">{{preguntas.pregunta}}</h5>
+        </div>
+        <div>
+            <a href="#" class="btn btn-primary">{{preguntas.respuesta}}</a>
+            <a href="#" class="btn btn-primary">{{preguntas.incorrecta1}}</a>
+            <a href="#" class="btn btn-primary">{{preguntas.incorrecta2}}</a>
+            <a href="#" class="btn btn-primary">{{preguntas.incorrecta3}}</a>
+        </div>
+    </div>
+</div>
+
+
+<ul>
+    <li class="nav-item">
+      <button (click)="cambiarFondo()">Cambiar estilo</button>
+    </li>
+  </ul>
+  <h1 [ngClass]="{'claro': estilos}">lorem ipsum dolor</h1>
+  
